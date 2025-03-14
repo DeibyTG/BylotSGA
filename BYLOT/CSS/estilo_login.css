@@ -1,0 +1,86 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    display: grid;
+    grid-template-columns: 70% 30%;
+    grid-template-rows: 50px auto 700px;
+    grid-template-areas:
+    "my-header my-header"
+    "my-article my-aside"
+    "my-footer my-footer";
+    gap: 10%;
+    font-family: VERDANA;
+
+}
+html{
+    background: linear-gradient(#90AFC5,#336B87,#2A3132);
+    height:100%;
+    width: auto;
+
+}
+
+header{
+    grid-area: my-header;
+    color: white;
+    text-transform: uppercase;
+    border-style:groove;
+    border-width: 1px;
+    height: 150px;
+    text-align: center;
+    padding: 10px;
+    
+}
+
+article{
+    grid-area: my-article;
+    color: white;
+    padding: 30px;
+    margin: 15px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.datos{
+    border-radius: 10% 0%;
+    align-content: center;
+    margin: 30px;
+    padding: 10px;
+    width: 250px;
+    background-color: rgb(174, 218, 204);
+}
+
+aside{
+    grid-area: my-aside;
+    padding: 20px;
+}
+
+a{
+    color: black;
+    align-items: center;
+    padding: 10px;
+    margin: auto;
+}
+
+footer{
+    grid-area: my-footer;
+    color: white;
+}
+
+@media screen and (max-width:500px) {
+    body{
+    display: grid;
+    display: block;
+    scroll-behavior: none;
+    grid-template-columns: auto;
+    grid-template-rows: 100px 170px 100px 100px;
+    grid-template-areas:
+    "my-header my-header"
+    "my-article my-article"
+    "my-aside my-aside"
+    "my-footer my-footer";
+     gap: 10%;
+    font-family: VERDANA;
+ }
+}
